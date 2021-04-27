@@ -1,4 +1,4 @@
 # ready-set-deploy
 
-## **This is a sample To Do List web application.**
+## **A sample to do list web application.**
 #### *Prepared by: Stanley Lawrence Sie*
