@@ -12,7 +12,7 @@
             {{#each data}}
                 <div style='display: flex; margin-bottom: 10px;'> 
                     <div id={{_id}}>{{task}}</div>
-                    {{!-- <button style='margin-left: 10px;' id={{_id}} onclick="deleteTask(this)">Delete</button> --}}
+                    <button style='margin-left: 10px;' id={{_id}} onclick="deleteTask(this)">Delete</button>
                 </div>
             {{/each}}
         </div>
@@ -32,7 +32,7 @@
                 }
             })
         }
-/*
+
         function deleteTask(el) {
             $.ajax({
                 url: '/delete',
@@ -45,7 +45,7 @@
                 }
             })
         }
-*/
+
         function refreshTask(list) {
             var parent = document.getElementById('list-container')
             parent.innerHTML = ''
@@ -57,13 +57,13 @@
                 var childDiv = document.createElement('div')
                 childDiv.id = list[i]._id
                 childDiv.innerHTML = list[i].task
-                //var button = document.createElement('button')
-                //button.id = list[i]._id
-                //button.style.marginLeft = '10px'
-                //button.onclick = () => deleteTask(button)
-                //button.innerHTML = 'Delete'
+                var button = document.createElement('button')
+                button.id = list[i]._id
+                button.style.marginLeft = '10px'
+                button.onclick = () => deleteTask(button)
+                button.innerHTML = 'Delete'
                 div.appendChild(childDiv)
-                //div.appendChild(button)
+                div.appendChild(button)
                 parent.appendChild(div)
             }
         }
